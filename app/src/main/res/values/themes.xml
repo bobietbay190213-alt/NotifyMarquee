@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NotifyMarquee" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nm_primary</item>
+        <item name="colorPrimaryVariant">@color/nm_primary_dark</item>
+        <item name="colorSecondary">@color/nm_accent</item>
+    </style>
+</resources>

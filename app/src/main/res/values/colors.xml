@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nm_primary">#1565C0</color>
+    <color name="nm_primary_dark">#0D47A1</color>
+    <color name="nm_accent">#42A5F5</color>
+    <color name="nm_green">#4CAF50</color>
+    <color name="nm_orange">#FF9800</color>
+    <color name="nm_red">#F44336</color>
+    <color name="nm_white">#FFFFFF</color>
+    <color name="nm_overlay_bg">#CC1565C0</color>
+</resources>

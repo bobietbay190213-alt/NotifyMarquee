@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Cài đặt"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="HIỂN THỊ" android:textColor="@color/nm_primary"
+                android:textSize="11sp" android:letterSpacing="0.1" android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kích thước chữ" android:textSize="14sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <SeekBar android:id="@+id/seekTextSize" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:max="20" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvTextSizeValue" android:layout_width="55dp" android:layout_height="wrap_content" android:text="14 sp" android:gravity="end" android:textColor="@color/nm_primary" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tốc độ chạy (1-10)" android:textSize="14sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <SeekBar android:id="@+id/seekScrollSpeed" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:max="9" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvScrollSpeedValue" android:layout_width="55dp" android:layout_height="wrap_content" android:text="5" android:gravity="end" android:textColor="@color/nm_primary" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Độ đục %" android:textSize="14sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <SeekBar android:id="@+id/seekTransparency" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:max="100" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvTransparencyValue" android:layout_width="55dp" android:layout_height="wrap_content" android:text="85%" android:gravity="end" android:textColor="@color/nm_primary" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thời gian hiển thị" android:textSize="14sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <SeekBar android:id="@+id/seekDisplayDuration" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:max="27" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvDisplayDurationValue" android:layout_width="55dp" android:layout_height="wrap_content" android:text="8 giây" android:gravity="end" android:textColor="@color/nm_primary" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vị trí dọc (px)" android:textSize="14sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <SeekBar android:id="@+id/seekPositionY" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:max="800" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvPositionYValue" android:layout_width="55dp" android:layout_height="wrap_content" android:text="100 px" android:gravity="end" android:textColor="@color/nm_primary" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Hiển thị tên ứng dụng" android:textSize="14sp" android:textStyle="bold" />
+                        <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchShowAppName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="BỘ LỌC ỨNG DỤNG" android:textColor="@color/nm_primary"
+                android:textSize="11sp" android:letterSpacing="0.1" android:layout_marginBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:cardCornerRadius="16dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAppFilters"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="LIÊN HỆ ƯU TIÊN" android:textColor="@color/nm_primary"
+                    android:textSize="11sp" android:letterSpacing="0.1" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddContact"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="+ Thêm" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp" app:cardCornerRadius="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@+id/tvNoPriorityContacts"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:padding="24dp"
+                        android:text="Chưa có liên hệ ưu tiên"
+                        android:textSize="13sp" android:textColor="#757575" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPriorityContacts"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
